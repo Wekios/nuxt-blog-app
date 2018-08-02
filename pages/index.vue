@@ -3,20 +3,16 @@
     <section class="intro">
       <h1>Howdy</h1>
     </section>
-    <section class="featured-posts">
-      <post-preview id="1" thumbnail="https://cdn.pixabay.com/photo/2017/12/26/21/19/tech-3041437_960_720.jpg" previewText="howdy" />
-      <post-preview id="2" thumbnail="https://cdn.pixabay.com/photo/2017/12/26/21/19/tech-3041437_960_720.jpg" previewText="howdy this is my second post!!! " />
-      <post-preview id="3" thumbnail="https://cdn.pixabay.com/photo/2017/12/26/21/19/tech-3041437_960_720.jpg" previewText="howdy this is my LAST FUCKING POST -OAOSPKMDPASMDOIASNDIMNA " />
-    </section>
+    <PostList/>
   </div>
 </template>
 
 <script>
-import PostPreview from "~/components/Posts/PostPreview";
+import PostList from "~/components/Posts/PostList";
 
 export default {
   components: {
-    PostPreview
+    PostList
   }
 };
 </script>
