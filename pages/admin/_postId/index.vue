@@ -9,19 +9,20 @@
 <script>
 import AdminPostForm from "@/components/Admin/AdminPostForm";
 export default {
+  layout: 'admin',
+  components: {
+    AdminPostForm
+  },
   data() {
     return {
       loadedPost: {
         author: "Veljko",
-        title: "Awesome Post",
+        title: "My awesome Post",
         content: "Super Amazing ",
         thumbnailLink:
           "https://e3.365dm.com/18/03/1096x616/skynews-renault-car-generic_4267669.jpg?bypass-service-worker&20180329120457"
       }
     };
-  },
-  components: {
-    AdminPostForm
   }
 };
 </script>
