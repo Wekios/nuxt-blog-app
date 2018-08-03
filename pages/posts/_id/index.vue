@@ -1,12 +1,12 @@
 <template>
   <div class="single-post-page">
     <section class="post">
-      <h1 class="post-title">Title of the Post</h1>
+      <h1 class="post-title"> {{ loadedPost.title }} </h1>
       <div class="post-details">
-        <div class="post-detail">Last updated on XXX</div>
-        <div class="post-detail">Written by NAME</div>
+        <div class="post-detail">Last updated on {{ loadedPost.updatedDate }}</div>
+        <div class="post-detail">Written by {{ loadedPost.author }}</div>
       </div>
-      <p class="post-content">Content of the post</p>
+      <p class="post-content"> {{ loadedPost.content }} </p>
     </section>
     <section class="post-feedback">
       <p>Let me know what you think about the post, send a mail to
@@ -17,7 +17,24 @@
 </template>
 
 <script>
-export default {};
+export default {
+  asyncData(context, callback) {
+    setTimeout(() => {
+      callback(null, {
+        loadedPost: {
+          id: "1",
+          title: "First Post (ID: " + context.params.id + ")",
+          previewText: "This is my first post",
+          author: "Wekios",
+          updatedDate: new Date(),
+          content: "Some dummy text that is not preview text",
+          thumbnail:
+            "https://e3.365dm.com/18/03/1096x616/skynews-renault-car-generic_4267669.jpg?bypass-service-worker&20180329120457"
+        }
+      });
+    }, 1000);
+  }
+};
 </script>
 
 <style scoped>
