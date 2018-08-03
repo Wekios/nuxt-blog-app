@@ -17,7 +17,9 @@ export default {
   },
   methods: {
     onSubmitted(postData) {
-      axios.post('https://my-database-186cf.firebaseio.com/posts.json', postData).then(result => console.log(result))
+      axios.post('https://my-database-186cf.firebaseio.com/posts.json',{
+        ...postData, updatedDate: new Date()
+      }).then(result => console.log(result))
       .catch(e => console.log(e))
     }
   }
