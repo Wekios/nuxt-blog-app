@@ -15,20 +15,19 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet',href: 'https://fonts.googleapis.com/css?family=Open+Sans' }
+      { rel: 'stylesheet', href: "https://fonts.googleapis.com/css?family=Open+Sans" }
     ]
   },
 
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#FFFFFF' },
+  loading: { color: '#3B8070' },
 
   /*
   ** Global CSS
   */
   css: [
-    '~/assets/styles/main.css'
   ],
 
   /*
@@ -51,7 +50,7 @@ module.exports = {
     ** You can extend webpack config here
     */
     extend(config, ctx) {
-      
+
     }
   }
 }

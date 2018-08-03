@@ -1,8 +1,8 @@
 {
-  "name": "my-first-nuxt-app",
+  "name": "nuxt-course",
   "version": "1.0.0",
-  "description": "My priceless Nuxt.js project",
-  "author": "Wekios",
+  "description": "Nuxt.js course for Udemy",
+  "author": "Maximilian Schwarzmüller",
   "private": true,
   "scripts": {
     "dev": "nuxt",
@@ -11,6 +11,7 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "nuxt": "^1.0.0"
   },
   "devDependencies": {

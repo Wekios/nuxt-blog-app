@@ -1,17 +1,15 @@
 <template>
   <div class="single-post-page">
     <section class="post">
-      <h1 class="post-title"> {{ loadedPost.title }} </h1>
+      <h1 class="post-title">{{ loadedPost.title }}</h1>
       <div class="post-details">
         <div class="post-detail">Last updated on {{ loadedPost.updatedDate }}</div>
         <div class="post-detail">Written by {{ loadedPost.author }}</div>
       </div>
-      <p class="post-content"> {{ loadedPost.content }} </p>
+      <p class="post-content">{{ loadedPost.content }}</p>
     </section>
     <section class="post-feedback">
-      <p>Let me know what you think about the post, send a mail to
-        <a href="nanandnandandna"> feedback@gmail.com </a>
-      </p>
+      <p>Let me know what you think about the post, send a mail to <a href="mailto:feedback@my-awesome-domain.com">feedback@my-awesome-domain.com</a>.</p>
     </section>
   </div>
 </template>
@@ -23,19 +21,20 @@ export default {
       callback(null, {
         loadedPost: {
           id: "1",
-          title: "First Post (ID: " + context.params.id + ")",
-          previewText: "This is my first post",
-          author: "Wekios",
+          title: "First Post (ID: " + context.route.params.id + ")",
+          previewText: "This is our first post!",
+          author: 'Maximilian',
           updatedDate: new Date(),
-          content: "Some dummy text that is not preview text",
+          content: 'Some dummy text which is definitely not the preview text though!',
           thumbnail:
-            "https://e3.365dm.com/18/03/1096x616/skynews-renault-car-generic_4267669.jpg?bypass-service-worker&20180329120457"
+            "https://static.pexels.com/photos/270348/pexels-photo-270348.jpeg"
         }
       });
     }, 1000);
   }
 };
 </script>
+
 
 <style scoped>
 .single-post-page {
